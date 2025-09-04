@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main() {
+    int ataque1 = 80, defesa1 = 70, velocidade1 = 90;
+    int ataque2 = 75, defesa2 = 85, velocidade2 = 85;
+
+    int escolha;
+
+    printf("=== SUPER TRUNFO ===\n");
+    printf("Escolha o atributo para comparar:\n");
+    printf("1 - Ataque\n");
+    printf("2 - Defesa\n");
+    printf("3 - Velocidade\n");
+    printf(">> ");
+    scanf("%d", &escolha);
+
+    switch(escolha) {
+        case 1:
+            if (ataque1 > ataque2)
+                printf("Carta 1 venceu no Ataque!\n");
+            else if (ataque2 > ataque1)
+                printf("Carta 2 venceu no Ataque!\n");
+            else
+                printf("Empate no Ataque!\n");
+            break;
+
+        case 2:
+            if (defesa1 > defesa2)
+                printf("Carta 1 venceu na Defesa!\n");
+            else if (defesa2 > defesa1)
+                printf("Carta 2 venceu na Defesa!\n");
+            else
+                printf("Empate na Defesa!\n");
+            break;
+
+        case 3:
+            if (velocidade1 > velocidade2)
+                printf("Carta 1 venceu na Velocidade!\n");
+            else if (velocidade2 > velocidade1)
+                printf("Carta 2 venceu na Velocidade!\n");
+            else
+                printf("Empate na Velocidade!\n");
+            break;
+
+        default:
+            printf("Opção inválida!\n");
+    }
+
+    return 0;
+}

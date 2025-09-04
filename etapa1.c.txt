@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    // Definição dos atributos das cartas
+    int ataque1 = 80, defesa1 = 70;
+    int ataque2 = 75, defesa2 = 85;
+
+    int escolha;
+
+    printf("=== SUPER TRUNFO ===\n");
+    printf("Escolha o atributo para comparar:\n");
+    printf("1 - Ataque\n");
+    printf("2 - Defesa\n");
+    printf(">> ");
+    scanf("%d", &escolha);
+
+    if (escolha == 1) {
+        if (ataque1 > ataque2) {
+            printf("Carta 1 venceu no Ataque!\n");
+        } else if (ataque2 > ataque1) {
+            printf("Carta 2 venceu no Ataque!\n");
+        } else {
+            printf("Empate no Ataque!\n");
+        }
+    }
+
+    if (escolha == 2) {
+        if (defesa1 > defesa2) {
+            printf("Carta 1 venceu na Defesa!\n");
+        } else if (defesa2 > defesa1) {
+            printf("Carta 2 venceu na Defesa!\n");
+        } else {
+            printf("Empate na Defesa!\n");
+        }
+    }
+
+    return 0;
+}
